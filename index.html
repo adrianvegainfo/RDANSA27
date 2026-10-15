@@ -1,0 +1,152 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Dansa Metropolitana / Antic Teatre</title><meta name="description" content="Propuestas para Dansa Metropolitana: DEBUT de Rosa Romero, Simbi de Inés Sybille y DISLOCADAS de Andrea El Ameri e Inés Sybille."><style>
+  :root{
+    --yellow:#fbff1f;
+    --blue:#0600ff;
+    --ink:#050505;
+    --paper:#fff;
+  }
+  *{box-sizing:border-box}
+  html{background:var(--yellow);scroll-behavior:smooth}
+  body{margin:0;background:var(--yellow);color:var(--ink);font-family:Helvetica,Arial,sans-serif;line-height:1.3;letter-spacing:0}
+  a{color:inherit;text-decoration:none}
+  .page{max-width:1120px;margin:0 auto;background:var(--paper);min-height:100vh;padding:28px 34px 58px}
+  .topbar{display:flex;justify-content:space-between;align-items:flex-start;gap:28px;margin-bottom:42px}
+  .logo{width:300px;transform:rotate(-1.5deg);filter:drop-shadow(8px 8px 0 #fff) drop-shadow(10px 10px 0 var(--ink))}
+  .logo img{display:block;width:100%;height:auto;border:3px solid var(--ink);background:var(--yellow)}
+  .header-note{text-align:right;max-width:560px;color:var(--blue);font-size:15px;line-height:1.15;font-weight:900;font-style:italic;text-transform:uppercase;padding-top:4px}
+  .cover{padding:34px 0 48px;border-top:6px solid var(--blue);border-bottom:6px solid var(--blue);margin-bottom:34px}
+  .eyebrow{color:var(--blue);font-weight:900;font-style:italic;text-transform:uppercase;font-size:17px;margin-bottom:14px}
+  h1{font-size:42px;line-height:.95;margin:0 0 18px;text-transform:uppercase;font-weight:900;letter-spacing:0;max-width:900px}
+  .intro{font-size:22px;max-width:930px;margin:0 0 36px}
+  .summary-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:32px}
+  .summary-card{display:block;border:3px solid var(--blue);padding:18px 14px 20px;min-height:190px;background:#fff;transform:skew(-5deg)}
+  .summary-card > *{transform:skew(5deg)}
+  .summary-card h3{font-size:15px;line-height:1;margin:0 0 10px;color:var(--blue);text-transform:uppercase;font-style:italic;font-weight:900}
+  .summary-card p{font-size:13px;margin:0;font-weight:700}
+  .summary-card:hover{background:var(--yellow)}
+  .summary-card .num{display:block;color:var(--ink);font-size:11px;text-transform:uppercase;margin-bottom:8px;font-weight:900}
+  .proposal{border-top:8px solid var(--blue);padding:34px 0 44px;scroll-margin-top:22px}
+  .hero-image{width:100%;background:#fff;display:flex;align-items:center;justify-content:center;overflow:hidden;margin-bottom:24px}
+  .hero-image img{width:100%;max-height:620px;object-fit:contain;display:block;background:#fff}
+  .proposal-head{display:grid;grid-template-columns:1fr auto;gap:18px;align-items:start;margin-bottom:15px}
+  h2{font-size:48px;line-height:.92;margin:0;text-transform:uppercase;font-weight:900;color:var(--blue);font-style:italic;letter-spacing:0}
+  .artist{font-size:18px;margin:8px 0 0;text-transform:uppercase;font-weight:900}
+  .tags{display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end;max-width:450px}
+  .tag{background:var(--yellow);border:2px solid var(--ink);padding:7px 10px;font-size:12px;text-transform:uppercase;font-weight:900;font-style:italic;transform:skew(-8deg)}
+  .tag span{display:block;transform:skew(8deg)}
+  .body{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:start}
+  .body p{font-size:18px;margin:0 0 14px}
+  .take{background:var(--yellow);border-left:10px solid var(--blue);padding:16px 18px;font-size:18px;font-weight:700;margin:0}
+  .materials-title{font-size:18px;text-transform:uppercase;color:var(--blue);font-style:italic;font-weight:900;margin:0 0 12px}
+  .links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .links a{display:block;border:2px solid var(--blue);padding:11px 12px;background:#fff;font-size:14px;font-weight:900;color:var(--blue);font-style:italic;transform:skew(-7deg)}
+  .links a span{display:block;transform:skew(7deg)}
+  .links strong{color:var(--ink);font-style:normal}
+  .contact-block{margin-top:18px;padding-top:12px;border-top:2px solid var(--ink)}
+  .contact-title{font-size:12px;text-transform:uppercase;color:var(--ink);font-style:italic;font-weight:900;margin:0 0 9px}
+  .contact-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+  .contact-links a,.contact-links span{display:block;border:1px solid var(--ink);padding:7px 8px;background:var(--yellow);font-size:11px;font-weight:900;color:var(--ink);font-style:italic;text-transform:uppercase;transform:skew(-7deg)}
+  .contact-links a em,.contact-links span em{display:block;transform:skew(7deg);font-style:normal;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .mini-nav{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:30px;padding-top:16px;border-top:2px solid var(--blue)}
+  .mini-col{display:grid;grid-template-rows:repeat(3,1fr);gap:7px}
+  .mini-nav a{display:block;min-width:0;border:1px solid var(--blue);color:var(--blue);background:#fff;padding:5px 7px;font-size:10px;text-transform:uppercase;font-weight:900;font-style:italic;text-align:center;transform:skew(-8deg)}
+  .mini-nav span{display:block;transform:skew(8deg);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .mini-nav a:hover{background:var(--yellow);color:var(--ink);border-color:var(--ink)}
+  .mini-nav .nav-arrow{font-size:13px;line-height:1}
+  .footer{margin-top:36px;border-top:4px solid var(--blue);padding-top:18px;display:flex;justify-content:space-between;font-size:12px;text-transform:uppercase;color:var(--blue);font-weight:900;font-style:italic}
+  @media (max-width:850px){
+    .topbar,.proposal-head,.body{display:block}
+    .summary-grid,.links,.contact-links{grid-template-columns:1fr}
+    .header-note{text-align:left;margin-top:28px}
+    .tags{justify-content:flex-start;margin-top:14px}
+    .page{padding:22px}
+    h2{font-size:36px}
+    h1{font-size:34px}
+  }
+
+.proposal-head{grid-template-columns:minmax(0,1fr);gap:14px}.tags{justify-content:flex-start;max-width:none}h2{overflow-wrap:anywhere}.links a:focus-visible,.summary-card:focus-visible{outline:4px solid var(--ink);outline-offset:5px}@media(max-width:600px){.logo{width:min(280px,90%)}.intro{font-size:19px}.footer{display:block}.footer div+div{margin-top:8px}}
+</style></head><body><main class="page" id="top">
+<header class="topbar"><div class="logo"><img src="assets/logo_antic_oficial.jpg" alt="Antic Teatre Espai de Creació"></div><div class="header-note">Propuestas / Dansa Metropolitana / Antic Teatre / Selección de Adrián Vega</div></header>
+<section class="cover"><div class="eyebrow">Propuestas recomendadas</div><h1>Dansa Metropolitana</h1><p class="intro">Tres propuestas para abrir un diálogo de programación desde Antic Teatre: cuerpo, transformación, archivo, espiritualidad, identidad y fiesta.</p><div class="summary-grid"><a class="summary-card" href="#rosa"><span class="num">01</span><h3>Rosa Romero</h3><p>DEBUT: humor y presencia, entre el stand-up, el flamenco y las artes vivas.</p></a><a class="summary-card" href="#ines"><span class="num">02</span><h3>Inés Sybille</h3><p>Simbi en aguas astronómicas: agua, archivo, diáspora, espiritualidad y memoria motriz.</p></a><a class="summary-card" href="#andrea"><span class="num">03</span><h3>Andrea El Ameri</h3><p>DISLOCADAS: una fiesta móvil, junto a Inés Sybille. DOMA como referencia de su trabajo anterior.</p></a></div></section>
+<section class="proposal" id="rosa">
+  <div class="hero-image"><img src="assets/rosa-debut.jpg" alt="DEBUT, de Rosa Romero: imagen de portada del dossier"></div>
+  <div class="proposal-head"><div><h2>DEBUT</h2><div class="artist">Rosa Romero</div></div><div class="tags"><span class="tag"><span>Performance</span></span><span class="tag"><span>Cuerpo y transformación</span></span><span class="tag"><span>50 minutos aprox.</span></span></div></div>
+  <div class="body"><div>
+    <p>Una performance concebida como un rito de iniciación frente al público. Rosa se expone con el deseo de ser aceptada y amada: cruzar un umbral, cambiar de cuerpo, espacio y estado, y transformarse en algo diferente.</p>
+    <p>La invitación a mirar pone en juego la relación entre intérprete y comunidad, el deseo de pertenencia y la fragilidad de la aceptación. La pieza cuestiona quién acoge a quién y qué esperamos de las comunidades artísticas.</p>
+    <p>Dirección, dramaturgia e interpretación: Rosa Romero. Acompañamiento dramatúrgico: Alberto Cortés. Trabajo corporal: Patricia Caballero. Vestuario: Gloria Trenado (Nantú). Paisaje sonoro: Pitu García. Iluminación: Carmen Mori.</p>
+    <p class="take">Rosa trabaja con el humor y la presencia en una propuesta que se sitúa entre el stand-up, el flamenco y las artes vivas. La transformación del cuerpo y la relación directa con el público atraviesan la pieza.</p>
+  </div><div>
+    <div class="materials-title">Materiales</div><div class="links">
+      <a href="materials/rosa-romero-debut-dossier.pdf"><span><strong>Dossier</strong> / DEBUT</span></a>
+      <a href="https://youtu.be/mghz6-EtXmc"><span><strong>Vídeo completo</strong> / Maestranza, 2021</span></a>
+      <a href="https://youtu.be/yDCi9OzvSFk"><span><strong>Teaser 1</strong> / DEBUT</span></a>
+      <a href="https://www.youtube.com/watch?v=OA86K7v825M"><span><strong>Teaser 2</strong> / DEBUT</span></a>
+    </div>
+    <p style="font-size:14px;margin-top:16px">El vídeo completo corresponde a la función del 8 de junio de 2021 en el Teatro de la Maestranza de Sevilla. Duración indicada en el dossier: unos 50 minutos. Caché, disponibilidad y rider técnico: pendientes de confirmar.</p>
+    <div class="contact-block"><div class="contact-title">Contacto</div><div class="contact-links"><a href="mailto:rosa86romero@gmail.com"><em>Rosa Romero / email</em></a><a href="tel:+34633204885"><em>+34 633 20 48 85</em></a></div></div>
+  </div></div>
+<nav class="mini-nav" aria-label="Navegación entre propuestas"><a href="#rosa"><span>Rosa Romero</span></a><a href="#ines"><span>Inés Sybille</span></a><a href="#andrea"><span>Andrea El Ameri</span></a><a href="#top"><span>↑↑ Inicio</span></a><a href="#top"><span>↑ Anterior</span></a><a href="#ines"><span>↓ Siguiente</span></a></nav></section>  <section class="proposal" id="ines">
+    <div class="hero-image"><img src="assets/ines.jpg" alt="Simbi en aguas astronómicas - Inés Sybille"></div>
+    <div class="proposal-head">
+      <div><h2>Simbi en aguas astronómicas</h2><div class="artist">Inés Sybille Vooduness</div></div>
+      <div class="tags"><span class="tag"><span>Barcelona / Catalunya</span></span><span class="tag"><span>Archivo y diáspora</span></span><span class="tag"><span>Cuerpo, agua y stream</span></span></div>
+    </div>
+    <div class="body">
+      <div>
+        <p>Simbi es una familia de divinidades del vudú haitiano vinculadas a puntos de agua y manantiales. La pieza conecta el arroyo con el stream digital y construye un archivo híbrido, coreográfico, analógico, sonoro y familiar que piensa territorio, diáspora y memoria motriz.</p>
+        <p>Inés trabaja desde una práctica situada entre danza, investigación, tecnopoéticas negras, espiritualidad, archivo y mutación. También incluyo Santa de sustrato autónomo como recorrido anterior.</p>
+        <p class="take">Me interesa mucho cómo trabaja el archivo y la espiritualidad. Veo a Inés como una artista que puede crecer mucho en los próximos años. <em>Simbi en aguas astronómicas</em>, su propuesta vinculada al agua, es una pieza potente que recomendaría especialmente. Apoyarla puede ser muy valioso: trabaja mucho y todavía no cuenta con tanto apoyo.</p>
+      </div>
+      <div>
+        <div class="materials-title">Materiales encontrados</div>
+        <div class="links">
+          <a href="materials/ines-simbi-dossier.pdf"><span><strong>Dossier</strong> / Simbi</span></a>
+          <a href="https://drive.google.com/file/d/1alu_5lpRVJTuKjjVxH0ALKs_vsBtw4QO/view?usp=drivesdk"><span><strong>Video completo</strong> / Simbi</span></a>
+          <a href="https://drive.google.com/file/d/14oE4NRHRXqbEsw9wKew3xNzsoHsNMh6o/view"><span><strong>Trailer</strong> / Simbi</span></a>
+          <a href="https://drive.google.com/file/d/12nXJnxYv51RLuxGYYWfx7HEO_LtXZHW1/view?usp=drivesdk"><span><strong>Fragmentos</strong> / detalle</span></a>
+          <a href="materials/ines-santa-dossier.pdf"><span><strong>Dossier</strong> / Santa de sustrato</span></a>
+          <a href="https://www.youtube.com/watch?v=hd8_Eo0xFyk"><span><strong>Trailer</strong> / Santa</span></a>
+        </div>
+        <div class="contact-block"><div class="contact-title">Contacto y enlaces</div><div class="contact-links">
+          <a href="mailto:vooduness@gmail.com"><em>Inés / email</em></a>
+          <a href="https://linktr.ee/vooduness"><em>Linktree</em></a>
+          <a href="https://www.instagram.com/vooduness/"><em>@vooduness</em></a>
+        </div></div>
+      </div>
+    </div>
+    
+  <nav class="mini-nav" aria-label="Navegación entre propuestas"><a href="#rosa"><span>Rosa Romero</span></a><a href="#ines"><span>Inés Sybille</span></a><a href="#andrea"><span>Andrea El Ameri</span></a><a href="#top"><span>↑↑ Inicio</span></a><a href="#rosa"><span>↑ Anterior</span></a><a href="#andrea"><span>↓ Siguiente</span></a></nav></section>  <section class="proposal" id="andrea">
+    <div class="hero-image"><img src="assets/andrea.jpg" alt="DISLOCADAS - Andrea El Ameri"></div>
+    <div class="proposal-head">
+      <div><h2>DISLOCADAS: una fiesta móvil</h2><div class="artist">Andrea El Ameri / Inés Sybille</div></div>
+      <div class="tags"><span class="tag"><span>Barcelona / Catalunya</span></span><span class="tag"><span>Danza y escena híbrida</span></span><span class="tag"><span>Fiesta, identidad y archivo</span></span></div>
+    </div>
+    <div class="body">
+      <div>
+        <p>Proyecto en creación que explora la identidad a través del cuerpo y de las prácticas de danza como archivo vivo de memorias culturales. Cruza las raíces marroquíes y andaluzas de Andrea con las raíces haitianas y catalanas de Inés, junto con waacking, house, popping, kuduro y coupé-décalé.</p>
+        <p>DOMA se incluye como trabajo anterior para conocer su lenguaje corporal. Los vídeos de DISLOCADAS corresponden al proceso de creación; conviene confirmar con Andrea el estado actual de la pieza.</p>
+        <p class="take">Andrea lleva tiempo trabajando y tiene una potencia muy clara. Esta propuesta puede generar una sinergia interesante con Inés Sybille: hay un público que puede acercarse a ambas piezas y un diálogo real entre sus prácticas. Para esta selección de Dansa Metropolitana, conviene conocer el momento actual del proyecto y sus condiciones de presentación.</p>
+      </div>
+      <div>
+        <div class="materials-title">Materiales encontrados</div>
+        <div class="links">
+          <a href="materials/andrea-dislocadas-dossier.pdf"><span><strong>Dossier</strong> / DISLOCADAS</span></a>
+          <a href="https://drive.google.com/file/d/1XxmI4p_J4UZSDGEJwtuOTmYBcd9KS-Vw/view?usp=sharing"><span><strong>Video completo</strong> / DOMA</span></a>
+          <a href="https://drive.google.com/file/d/1HinDeXKlwIcHbt32-i51Gokfq9wHLg8j/view?usp=sharing"><span><strong>Teaser</strong> / DOMA</span></a>
+          <a href="https://youtu.be/vgovRotkjwE"><span><strong>Video proceso</strong> / DISLOCADAS 01</span></a>
+          <a href="https://youtu.be/BrQzmqKIqJI"><span><strong>Video proceso</strong> / DISLOCADAS 02</span></a>
+          <a href="https://www.andreaelameri.net/es/"><span><strong>Web</strong> / Andrea</span></a>
+        </div>
+        <div class="contact-block"><div class="contact-title">Contacto y enlaces</div><div class="contact-links">
+          <a href="mailto:andreaelameri@gmail.com"><em>Andrea / email</em></a>
+          <a href="mailto:mariarueda@laikonica.com"><em>Maria Rueda / email</em></a>
+          <a href="tel:+34627461240"><em>+34 627 461 240</em></a>
+          <a href="https://www.instagram.com/andreaelameri/"><em>@andreaelameri</em></a>
+          <a href="https://www.laikonica.com/"><em>Laikonica</em></a>
+        </div></div>
+      </div>
+    </div>
+    
+  <nav class="mini-nav" aria-label="Navegación entre propuestas"><a href="#rosa"><span>Rosa Romero</span></a><a href="#ines"><span>Inés Sybille</span></a><a href="#andrea"><span>Andrea El Ameri</span></a><a href="#top"><span>↑↑ Inicio</span></a><a href="#ines"><span>↑ Anterior</span></a><a href="#top"><span>↓ Inicio</span></a></nav></section>
+<footer class="footer"><div>Antic Teatre / Dansa Metropolitana</div><div>Preparado por Adrián Vega / octubre 2026</div></footer></main></body></html>
